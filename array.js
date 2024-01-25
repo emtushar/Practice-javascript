@@ -34,3 +34,5 @@ const dcHeroes = ["batman","superman","flash"]
 // const newArray = Array.from({name:"tushar"}) //have to specify which key needs to be converted ,otherwise returns []
 // const newArray = Array.of(marvelHeroes,dcHeroes) //returns a array of arrays
 // console.log(newArray)
+
+
