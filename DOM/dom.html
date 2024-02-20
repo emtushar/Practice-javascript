@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    body{
+        background-color: #212121;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <h2>  Languages  </h2>
+    <ul class="languages">
+        <li>Hindi</li>
+    </ul>
+</body>
+<script>
+    // Adding the ellements using dom
+
+    function addElem (langName){
+const newLi = document.createElement("li")
+newLi.innerHTML=`${langName}`
+document.querySelector("ul").appendChild(newLi)
+    }
+    addElem("English")
+
+
+    function addOptElem (langName){
+const newLi = document.createElement("li")
+newLi.appendChild(document.createTextNode(`${langName}`))
+document.querySelector("ul").appendChild(newLi)
+    }
+    addOptElem("Punjabi")
+    addOptElem("Haryanvi")
+    addOptElem("Marathi")
+    addOptElem("Tamil")
+
+
+    // Editing the elments 
+    const selectedElem = document.querySelector("li:nth-child(2)")
+    // selectedElem.innerHTML = "Kashmiri"  
+    // selectedElem.outerHTML = "<li>Kashmiri</li>"  
+    // selectedElem.textContent = "Kashmiri"
+    // selectedElem.innerText = "Kashmiri"
+const newText = document.createElement("li")
+newText.textContent ="Kashmiri"
+selectedElem.replaceWith(newText)
+
+// Delete or remove 
+
+const lastlang = document.querySelector("li:last-child")
+// console.log(lastlang)
+lastlang.remove() 
+</script>
+</html>
