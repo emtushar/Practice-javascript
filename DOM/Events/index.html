@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+        a{
+            color: #7fffd4;
+        }
+    </style>
+</head>
+<body>
+    <h2>Images List</h2>
+    <ul id="images">
+        <li class="image"><img src="https://images.unsplash.com/photo-1707707289461-4d1bf6982b08?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="sheep" id="sheep"  width="200px"></li>
+        <li class="image"><img src="https://images.unsplash.com/photo-1707707290167-defaee1cebbf?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="mountain"  id="mountain" width="200px"></li>
+        <li class="image"><img src="https://images.unsplash.com/photo-1707707289441-1a020443784e?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bird"  id="bird"  width="200px"></li>
+        <li class="image"><img src="https://images.unsplash.com/photo-1707707289494-af5b6017f7ab?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="girl"  id="girl"  width="200px"></li>
+        <li class="image"><img src="https://images.unsplash.com/photo-1707707290120-b1f6472832f7?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bicycle" id="bicycle" width="200px"></li>
+        <li class="link"><a href="http://google.co.in">Google</a></li>
+    </ul>
+
+
+    <script>
+//         const images = document.querySelector("#images")
+//         images.addEventListener("click",function(e){
+//             // console.log(e);
+//             console.log("Clicked inside ul")
+//         },false)
+//          document.querySelector("#girl").addEventListener("click",function(e){
+//             console.log("Hello Girll");
+//             e.stopPropagation();
+//         },false)
+        document.querySelector("a").addEventListener("click",function(e){
+            e.preventDefault();
+//             e.stopPropagation();
+// console.log("Google link clicked")
+        },false)
+
+
+const images = document.querySelector("#images").addEventListener("click",function(e){
+    console.log(e.target.parentNode)
+    if(e.target.tagName === "IMG"){
+        const selectedItem = e.target.parentNode
+selectedItem.remove()    
+    }
+
+// alternative method to remove 
+// selectedItem.parentNode.removeChild(selectedItem);s
+})
+
+
+    </script>
+</body>
+</html>
